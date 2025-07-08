@@ -19,6 +19,7 @@ class Account extends Model
         'book_id',
         'name',
         'icon',
+        'is_deleted'
     ];
 
     public function user()

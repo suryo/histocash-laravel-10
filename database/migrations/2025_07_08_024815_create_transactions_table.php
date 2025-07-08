@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('date');
             $table->string('note')->nullable();
             $table->uuid('target_account_id')->nullable(); // hanya untuk transfer
+            $table->boolean('is_deleted')->default(false);
             $table->timestamps();
             $table->softDeletes();
 

@@ -24,6 +24,7 @@ class Transaction extends Model
         'date',
         'note',
         'target_account_id',
+        'is_deleted'
     ];
 
     public function user() {

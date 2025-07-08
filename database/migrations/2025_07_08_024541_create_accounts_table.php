@@ -14,6 +14,7 @@ return new class extends Migration
             $table->uuid('book_id'); // relasi ke book
             $table->string('name');
             $table->string('icon')->nullable(); // simpan nama emoji/icon string
+            $table->boolean('is_deleted')->default(false);
             $table->timestamps();
             $table->softDeletes();
 

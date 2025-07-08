@@ -17,6 +17,7 @@ class Book extends Model
         'id',
         'user_id',
         'name',
+        'is_deleted'
     ];
 
     public function user()

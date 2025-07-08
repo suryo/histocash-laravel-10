@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('name');
             $table->enum('type', ['income', 'expense']); // jenis kategori
             $table->string('icon')->nullable(); // emoji/icon kategori
+            $table->boolean('is_deleted')->default(false);
             $table->timestamps();
             $table->softDeletes();
 

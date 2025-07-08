@@ -12,6 +12,7 @@ return new class extends Migration
             $table->uuid('id')->primary(); // UUID dari client
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('name');
+            $table->boolean('is_deleted')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

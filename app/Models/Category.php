@@ -20,6 +20,7 @@ class Category extends Model
         'name',
         'type',
         'icon',
+        'is_deleted'
     ];
 
     public function user()

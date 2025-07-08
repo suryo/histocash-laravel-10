@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\SyncController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,4 +26,10 @@ Route::post('/login',    [AuthController::class, 'login']);
 Route::middleware('auth:api')->group(function () {
     Route::get('/me',     [AuthController::class, 'me']);
     Route::post('/logout', [AuthController::class, 'logout']);
+});
+
+Route::middleware('auth:api')->group(function () {
+    Route::get('/sync/download', [SyncController::class, 'download']);
+    Route::post('/sync/upload',   [SyncController::class, 'upload']);
+    Route::get('/sync/summary',  [SyncController::class, 'summary']);
 });
