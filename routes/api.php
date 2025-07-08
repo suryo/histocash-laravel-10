@@ -33,3 +33,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/sync/upload',   [SyncController::class, 'upload']);
     Route::get('/sync/summary',  [SyncController::class, 'summary']);
 });
+
+Route::get('/ping', function () {
+    return response()->json(['status' => 'ok'], 200);
+});
