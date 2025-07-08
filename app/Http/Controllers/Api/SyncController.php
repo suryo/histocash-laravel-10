@@ -82,10 +82,10 @@ class SyncController extends Controller
                     ['id' => $item['id']],
                     [
                         'user_id'    => $user->id,
-                        'book_id'    => $item['book_id'],
                         'name'       => $item['name'],
                         'type'       => $item['type'],
                         'icon'       => $item['icon'] ?? '',
+                        'color'      => $item['color'] ?? 0,
                         'updated_at' => $item['updated_at'],
                         'is_deleted' => $item['is_deleted'] ?? false,
                     ]
